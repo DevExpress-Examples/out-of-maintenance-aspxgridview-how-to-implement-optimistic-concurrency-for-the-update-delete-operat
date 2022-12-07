@@ -49,7 +49,7 @@ Partial Public Class _Default
 			Throw New Exception(errorMessage)
 		End If
 	End Sub
-	Protected Sub grid_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewClientJSPropertiesEventArgs)
+	Protected Sub grid_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewClientJSPropertiesEventArgs)
 		For i As Integer = 0 To grid.VisibleRowCount - 1
 			RowHashes(grid.GetRowValues(i, grid.KeyFieldName)) = grid.GetRowValues(i, "Version").ToString()
 		Next i
